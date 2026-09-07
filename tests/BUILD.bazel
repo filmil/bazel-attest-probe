@@ -1,0 +1,8 @@
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
+
+sh_test(
+    name = "probe_test",
+    size = "small",
+    srcs = ["probe_test.sh"],
+    data = ["//:MODULE.bazel"],
+)
